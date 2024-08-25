@@ -7,16 +7,16 @@ def binary_search(list: list[int], item: int) -> int:
     print(f"{item = }", end=";\n")
     
     while low <= high:
-        mid: int = (low + high) // 2
-        guess: int = list[mid]
+        half: int = (low + high) // 2
+        guess: int = list[half]
         
-        print(f"{guess = }; {mid = }")
+        print(f"{guess = }; {half = }")
         if guess == item:
-            return mid
+            return half
         elif guess > item:
-            high = mid - 1
+            high = half - 1
         else:
-            low = mid + 1
+            low = half + 1
             
     return None
 
